@@ -1,0 +1,57 @@
+.page {
+    min-height: 100vh;
+    background-color: mistyrose;
+}
+
+/* Example 01 */
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: coral;
+    /* Appears abruptly even though we have transition */
+    visibility: hidden;
+    /* Add opacity to make it gradual */
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.page:hover .box {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Example 02 */
+.box-container {
+    display: flex;
+}
+
+.box-01 {
+    width: 150px;
+    height: 150px;
+    background-color: coral;
+    border: 1px solid white;
+
+    /* Trying out overflow: hidden;, but the effect is not what I want */
+    /* overflow: hidden; */
+}
+
+.inner-box {
+    width: 100px;
+    height: 100px;
+    background-color: rebeccapurple;
+
+    transform: translateX(100%);
+    /* I can still interact with this element */
+    opacity: 0;
+    /* I cannot interact with the element */
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+.box-01:hover .inner-box{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
