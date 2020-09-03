@@ -10,7 +10,7 @@
     background-color: coral;
     /* Appears abruptly even though we have transition */
     visibility: hidden;
-    /* Add opacity to make it gradual */
+    /* Add opacity to make the change gradual */
     opacity: 0;
 
     transition: 0.3s;
@@ -31,7 +31,7 @@
     height: 150px;
     background-color: coral;
     border: 1px solid white;
-
+    
     /* Trying out overflow: hidden;, but the effect is not what I want */
     /* overflow: hidden; */
 }
